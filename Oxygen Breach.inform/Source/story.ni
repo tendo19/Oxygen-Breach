@@ -8,7 +8,8 @@ Main Room is a room.
 It is south of the Control Center and north of the Utilty Room.
 The description of Main Room is "..."
 
-Utility Room is south of the Main Room.
+Utility Room is a room.
+It is south of the Main Room.
 The description of Utility Room is "..."
 
 West Wing is a room.
@@ -19,6 +20,11 @@ East Wing is a room.
 It is east of the Main Room.
 The description of East Wing is "..."
 
+Commander is a man in the control center.
+The description of the commander is "..."
+
+Aerospace Engineer is a man in the main room.
+The description of the aerospace engineer is "..."
 
 
 

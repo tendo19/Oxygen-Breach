@@ -14,6 +14,8 @@ Release 1 / Serial number 190220 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Control Center
 ...
 
+You can see a Commander here.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1005"></child>
@@ -43,6 +45,70 @@ Main Room
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Utility Room
+...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1011"></child>
+        </children>
+    </item>
+    <item nodeId="node-1011">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Main Room
+...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1012"></child>
+        </children>
+    </item>
+    <item nodeId="node-1012">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+West Wing
+...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1013"></child>
+        </children>
+    </item>
+    <item nodeId="node-1013">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Main Room
+...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1014"></child>
+        </children>
+    </item>
+    <item nodeId="node-1014">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+East Wing
+...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1015"></child>
+        </children>
+    </item>
+    <item nodeId="node-1015">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1016"></child>
+        </children>
+    </item>
+    <item nodeId="node-1016">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Main Room
 ...
 
 &gt;</result>

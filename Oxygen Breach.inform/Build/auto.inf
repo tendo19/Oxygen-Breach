@@ -4402,7 +4402,7 @@ Global lightflag = false;
 ! ListWriter.i6t: Memory
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant REQUISITION_STACK_SIZE = 3*19;
+Constant REQUISITION_STACK_SIZE = 3*21;
 Array requisition_stack --> REQUISITION_STACK_SIZE;
 Global requisition_stack_pointer = 0;
 
@@ -10549,7 +10549,7 @@ Constant IK6_First = nothing;
 Constant IK7_First = nothing;
 Constant IK8_First = selfobj;
 Constant IK9_First = nothing;
-Constant IK10_First = nothing;
+Constant IK10_First = I131_commander;
 Constant IK11_First = nothing;
 Constant IK12_First = nothing;
 Constant IK13_First = nothing;
@@ -11027,9 +11027,9 @@ Object selfobj ""
     with cap_short_name BC_143
     has mark_as_thing
     with IK2_Count 0
-    with IK2_Link nothing
+    with IK2_Link I131_commander
     with IK8_Count 0
-    with IK8_Link nothing
+    with IK8_Link I131_commander
     with KD_Count 8
     with parse_name Parse_Name_GV13
     with action_bitmap 0 0 0 0 0 
@@ -11056,10 +11056,32 @@ Object I125_control_center ""
     with article BC_152
 ;
 
-Object I126_main_room ""
-    class K1_room
+Object -> I131_commander ""
+    class K10_man
     with short_name BC_153
     with description BC_154
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 1
+    with IK2_Link I132_aerospace_engineer
+    with IK8_Count 1
+    with IK8_Link I132_aerospace_engineer
+    with IK10_Count 0
+    with IK10_Link I132_aerospace_engineer
+    with KD_Count 10
+    with name 'commander' 'men//p' 
+    with action_bitmap 0 0 0 0 0 
+    with initial BC_155
+    with list_together BC_156
+    with plural BC_157
+    with article BC_158
+;
+
+Object I126_main_room ""
+    class K1_room
+    with short_name BC_159
+    with description BC_160
     with vector 0
     with room_index -1
     has mark_as_room
@@ -11067,14 +11089,36 @@ Object I126_main_room ""
     with IK1_Link I127_utilty_room
     with KD_Count 1
     with name 'main' 'room' 'rooms//p' 
-    with list_together BC_155
-    with plural BC_156
-    with article BC_157
+    with list_together BC_161
+    with plural BC_162
+    with article BC_163
+;
+
+Object -> I132_aerospace_engineer ""
+    class K10_man
+    with short_name BC_164
+    with description BC_165
+    has proper
+    with vector 0
+    has mark_as_thing
+    with IK2_Count 2
+    with IK2_Link nothing
+    with IK8_Count 2
+    with IK8_Link nothing
+    with IK10_Count 1
+    with IK10_Link nothing
+    with KD_Count 10
+    with name 'aerospace' 'engineer' 'men//p' 
+    with action_bitmap 0 0 0 0 0 
+    with initial BC_166
+    with list_together BC_167
+    with plural BC_168
+    with article BC_169
 ;
 
 Object I127_utilty_room ""
     class K1_room
-    with short_name BC_158
+    with short_name BC_170
     with vector 0
     with room_index -1
     has mark_as_room
@@ -11082,16 +11126,16 @@ Object I127_utilty_room ""
     with IK1_Link I128_utility_room
     with KD_Count 1
     with name 'utilty' 'room' 'rooms//p' 
-    with description BC_159
-    with list_together BC_160
-    with plural BC_161
-    with article BC_162
+    with description BC_171
+    with list_together BC_172
+    with plural BC_173
+    with article BC_174
 ;
 
 Object I128_utility_room ""
     class K1_room
-    with short_name BC_163
-    with description BC_164
+    with short_name BC_175
+    with description BC_176
     has proper
     with vector 0
     with room_index -1
@@ -11100,15 +11144,15 @@ Object I128_utility_room ""
     with IK1_Link I129_west_wing
     with KD_Count 1
     with name 'utility' 'room' 'rooms//p' 
-    with list_together BC_165
-    with plural BC_166
-    with article BC_167
+    with list_together BC_177
+    with plural BC_178
+    with article BC_179
 ;
 
 Object I129_west_wing ""
     class K1_room
-    with short_name BC_168
-    with description BC_169
+    with short_name BC_180
+    with description BC_181
     has proper
     with vector 0
     with room_index -1
@@ -11117,15 +11161,15 @@ Object I129_west_wing ""
     with IK1_Link I130_east_wing
     with KD_Count 1
     with name 'west' 'wing' 'rooms//p' 
-    with list_together BC_170
-    with plural BC_171
-    with article BC_172
+    with list_together BC_182
+    with plural BC_183
+    with article BC_184
 ;
 
 Object I130_east_wing ""
     class K1_room
-    with short_name BC_173
-    with description BC_174
+    with short_name BC_185
+    with description BC_186
     has proper
     with vector 0
     with room_index -1
@@ -11134,9 +11178,9 @@ Object I130_east_wing ""
     with IK1_Link nothing
     with KD_Count 1
     with name 'east' 'wing' 'rooms//p' 
-    with list_together BC_175
-    with plural BC_176
-    with article BC_177
+    with list_together BC_187
+    with plural BC_188
+    with article BC_189
 ;
 
 Constant I71_german_language = 1;
@@ -11190,12 +11234,12 @@ Constant I123_masculine_gender = 2;
 Constant I124_feminine_gender = 3;
 Array Global_Vars -->
   (false) ! 7 darkness witnessed
-  (BC_178) ! 25 command prompt
+  (BC_190) ! 25 command prompt
   (I73_english_language) ! 29 language of play
-  (BC_179) ! 32 story author
-  (BC_180) ! 33 story headline
-  (BC_181) ! 34 story genre
-  (BC_182) ! 35 story description
+  (BC_191) ! 32 story author
+  (BC_192) ! 33 story headline
+  (BC_193) ! 34 story genre
+  (BC_194) ! 35 story description
   (1) ! 36 release number
   (0) ! 37 story creation year
   (0) ! 45 locale paragraph count
@@ -11210,14 +11254,14 @@ Array Global_Vars -->
 
 
 Array T0_final_question_options table  tab_0_0 tab_0_1 tab_0_2 tab_0_3 tab_0_4;
-Array tab_0_0 table $0664 0 (BC_183) (BC_184) (BC_185) (BC_186) (BC_187) ;
+Array tab_0_0 table $0664 0 (BC_195) (BC_196) (BC_197) (BC_198) (BC_199) ;
 Array tab_0_1 table $0465 1 (0) (0) (1) (0) (0) ;
 Array tab_0_2 table $2066 2 (Consult_Grammar_93) (Consult_Grammar_94) (Consult_Grammar_95) (Consult_Grammar_96) (Consult_Grammar_97) ;
 Array tab_0_3 table $0067 3 (IMMEDIATELY_RESTART_VM_R) (IMMEDIATELY_RESTORE_SAVED_R) ( TABLE_NOVALUE) (IMMEDIATELY_QUIT_R) (IMMEDIATELY_UNDO_R) ;
 Array tab_0_4 table $0068 4 ( TABLE_NOVALUE) ( TABLE_NOVALUE) (V27_amusing_a_victorious_pla) ( TABLE_NOVALUE) ( TABLE_NOVALUE) ;
 Array T1_locale_priorities table  tab_1_0 tab_1_1;
-Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE;
-Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE;
+Array tab_1_0 table $0869 NULL ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
+Array tab_1_1 table $446a 5 ( TABLE_NOVALUE)  TABLE_NOVALUE TABLE_NOVALUE TABLE_NOVALUE;
 Array TB_Blanks -> 
   ! For table T0_final_question_options
   $00  ! Column 0
@@ -11227,7 +11271,7 @@ Array TB_Blanks ->
   $1b  ! Column 4
   
   ! For table T1_locale_priorities
-  $03  ! Column 1
+  $0f  ! Column 1
   
   ! End of table
   NULL NULL;
@@ -27997,7 +28041,7 @@ Array FWMatrix --> NUM_ROOMS*NUM_ROOMS;
 ! Relations.i6t: Relation Route-Finding
 ! ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
-Constant MAX_ROUTE_LENGTH = 19 + 32;
+Constant MAX_ROUTE_LENGTH = 21 + 32;
 
 [ RelationRouteTo relation from to count  handler;
 	if (count) {
@@ -48797,21 +48841,23 @@ Verb 'notify'
 
 
 Constant TX_PS_35 = "...";
-Constant TX_PS_41 = ">";
+Constant TX_PS_43 = ">";
+Constant TX_PS_38 = "Aerospace Engineer";
 Constant TX_PS_3 = "An Interactive Fiction";
 Constant TX_PS_32 = "As good-looking as ever.";
+Constant TX_PS_36 = "Commander";
 Constant TX_PS_34 = "Control Center";
-Constant TX_PS_40 = "East Wing";
-Constant TX_PS_42 = "Fiction";
-Constant TX_PS_36 = "Main Room";
+Constant TX_PS_42 = "East Wing";
+Constant TX_PS_44 = "Fiction";
+Constant TX_PS_37 = "Main Room";
 Constant TX_PS_2 = "Oxygen Breach";
-Constant TX_PS_46 = "QUIT";
-Constant TX_PS_43 = "RESTART";
-Constant TX_PS_44 = "RESTORE a saved game";
-Constant TX_PS_47 = "UNDO the last command";
-Constant TX_PS_38 = "Utility Room";
-Constant TX_PS_37 = "Utilty Room";
-Constant TX_PS_39 = "West Wing";
+Constant TX_PS_48 = "QUIT";
+Constant TX_PS_45 = "RESTART";
+Constant TX_PS_46 = "RESTORE a saved game";
+Constant TX_PS_49 = "UNDO the last command";
+Constant TX_PS_40 = "Utility Room";
+Constant TX_PS_39 = "Utilty Room";
+Constant TX_PS_41 = "West Wing";
 Constant TX_PS_33 = "Yourself";
 Constant TX_PS_9 = "animals";
 Constant TX_PS_14 = "backdrops";
@@ -48830,7 +48876,7 @@ Constant TX_PS_30 = "outside";
 Constant TX_PS_6 = "people";
 Constant TX_PS_13 = "player's holdalls";
 Constant TX_PS_16 = "regions";
-Constant TX_PS_45 = "see some suggestions for AMUSING things to do";
+Constant TX_PS_47 = "see some suggestions for AMUSING things to do";
 Constant TX_PS_22 = "south";
 Constant TX_PS_23 = "southeast";
 Constant TX_PS_24 = "southwest";
@@ -56152,37 +56198,49 @@ Array BC_153 --> PACKED_TEXT_STORAGE TX_PS_36;
 Array BC_154 --> PACKED_TEXT_STORAGE TX_PS_35;
 Array BC_155 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_156 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_157 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_158 --> PACKED_TEXT_STORAGE TX_PS_37;
-Array BC_159 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_160 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_157 --> PACKED_TEXT_STORAGE TX_PS_7;
+Array BC_158 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_159 --> PACKED_TEXT_STORAGE TX_PS_37;
+Array BC_160 --> PACKED_TEXT_STORAGE TX_PS_35;
 Array BC_161 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_162 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_163 --> PACKED_TEXT_STORAGE TX_PS_38;
-Array BC_164 --> PACKED_TEXT_STORAGE TX_PS_35;
-Array BC_165 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_163 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_164 --> PACKED_TEXT_STORAGE TX_PS_38;
+Array BC_165 --> PACKED_TEXT_STORAGE TX_PS_35;
 Array BC_166 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_167 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_168 --> PACKED_TEXT_STORAGE TX_PS_39;
-Array BC_169 --> PACKED_TEXT_STORAGE TX_PS_35;
-Array BC_170 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_168 --> PACKED_TEXT_STORAGE TX_PS_7;
+Array BC_169 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_170 --> PACKED_TEXT_STORAGE TX_PS_39;
 Array BC_171 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
 Array BC_172 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_173 --> PACKED_TEXT_STORAGE TX_PS_40;
-Array BC_174 --> PACKED_TEXT_STORAGE TX_PS_35;
-Array BC_175 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_176 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_173 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_174 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_175 --> PACKED_TEXT_STORAGE TX_PS_40;
+Array BC_176 --> PACKED_TEXT_STORAGE TX_PS_35;
 Array BC_177 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_178 --> PACKED_TEXT_STORAGE TX_PS_41;
-Array BC_179 --> PACKED_TEXT_STORAGE TX_PS_4;
-Array BC_180 --> PACKED_TEXT_STORAGE TX_PS_3;
-Array BC_181 --> PACKED_TEXT_STORAGE TX_PS_42;
+Array BC_178 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_179 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_180 --> PACKED_TEXT_STORAGE TX_PS_41;
+Array BC_181 --> PACKED_TEXT_STORAGE TX_PS_35;
 Array BC_182 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
-Array BC_183 --> PACKED_TEXT_STORAGE TX_PS_43;
-Array BC_184 --> PACKED_TEXT_STORAGE TX_PS_44;
-Array BC_185 --> PACKED_TEXT_STORAGE TX_PS_45;
-Array BC_186 --> PACKED_TEXT_STORAGE TX_PS_46;
-Array BC_187 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_183 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_184 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_185 --> PACKED_TEXT_STORAGE TX_PS_42;
+Array BC_186 --> PACKED_TEXT_STORAGE TX_PS_35;
+Array BC_187 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_188 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_189 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_190 --> PACKED_TEXT_STORAGE TX_PS_43;
+Array BC_191 --> PACKED_TEXT_STORAGE TX_PS_4;
+Array BC_192 --> PACKED_TEXT_STORAGE TX_PS_3;
+Array BC_193 --> PACKED_TEXT_STORAGE TX_PS_44;
+Array BC_194 --> PACKED_TEXT_STORAGE EMPTY_TEXT_PACKED;
+Array BC_195 --> PACKED_TEXT_STORAGE TX_PS_45;
+Array BC_196 --> PACKED_TEXT_STORAGE TX_PS_46;
+Array BC_197 --> PACKED_TEXT_STORAGE TX_PS_47;
+Array BC_198 --> PACKED_TEXT_STORAGE TX_PS_48;
+Array BC_199 --> PACKED_TEXT_STORAGE TX_PS_49;
 
 
 
