@@ -14,7 +14,7 @@ Reading language definition from </Applications/Inform.app/Contents/Resources/In
 Phase I ... Lexical analysis
 -----------------------------------------------------
 
-I've now read your source text, which is 137 words long.
+I've now read your source text, which is 205 words long.
 
 
 -----------------------------------------------------
@@ -53,129 +53,26 @@ Phase VI ... Semantic analysis III
 Phase VII ... First pass through assertions
 -----------------------------------------------------
 
+        Problem PM_ChalkCheese issued from inform7/Chapter 15/Make Assertions.w, line 1530
 
-
------------------------------------------------------
-Phase VIII ... Second pass through assertions
------------------------------------------------------
-
-
-
------------------------------------------------------
-Phase IX ... Making the model world
------------------------------------------------------
-
-
-
------------------------------------------------------
-Phase X ... Tables and grammar
------------------------------------------------------
+          >--> The sentence 'The locker is a locked and unlockable' (source text, line 40)
+            appears to say two things are the same - I am reading 'locker' and
+            'unlockable' as two different things, and therefore it makes no sense to
+            say that one is the other: it would be like saying that 'Tarzan is Jane'.
+            It would be all right if the second thing were the name of a kind, perhaps
+            with properties: for instance 'Treehouse is a lighted room' says that
+            something called Treehouse exists and that it is a 'room', which is a kind
+            I know about, combined with a property called 'lighted' which I also know
+            about.
 
 
 
 -----------------------------------------------------
-Phase XI ... Phrases and rules
+Phase VIII ... Compilation now complete
 -----------------------------------------------------
 
-
-
------------------------------------------------------
-Phase XII ... Code generation
------------------------------------------------------
-
-
-
-==== Phase XII.1 ... Compiling the storage for the model world ====
-
-
-
-==== Phase XII.2 ... Compiling the tables ====
-
-
-
-==== Phase XII.3 ... Compiling the equations ====
-
-
-
-==== Phase XII.4 ... Compiling the named action patterns ====
-
-
-
-==== Phase XII.5 ... Compiling the action routines ====
-
-
-
-==== Phase XII.6 ... Compiling first block of phrases ====
-
-
-
-==== Phase XII.7 ... Compiling the rulebooks ====
-
-
-
-==== Phase XII.8 ... Compiling scene details ====
-
-
-
-==== Phase XII.9 ... CTNL ====
-
-
-
-==== Phase XII.10 ... Slashing grammar (G1) ====
-
-
-
-==== Phase XII.11 ... Determining grammar (G2) ====
-
-
-
-==== Phase XII.12 ... Compiling GPR tokens for parsing various kinds of value ====
-
-
-
-==== Phase XII.13 ... Compiling second block of phrases ====
-
-
-
-==== Phase XII.14 ... Compiling noun and scope filter tokens ====
-
-
-
-==== Phase XII.15 ... Compiling chronology ====
-
-
-
-==== Phase XII.16 ... Compiling I6 Verb directives ====
-
-
-
-==== Phase XII.17 ... Slashing grammar (G1) ====
-
-
-
-==== Phase XII.18 ... Determining grammar (G2) ====
-
-
-
-==== Phase XII.19 ... Sorting and compiling non-value grammar (G3, G4) ====
-
-
-
-==== Phase XII.20 ... Compiling noun and scope filter tokens ====
-
-
-
-==== Phase XII.21 ... Compiling routines from predicate calculus ====
-
-Providing for a total heap of 8192, given requirement of 8192
-
-
------------------------------------------------------
-Phase XIII ... Compilation now complete
------------------------------------------------------
-
-Total of 101 files written as streams.
-CPU time: 246 centiseconds
+Total of 4 files written as streams.
+CPU time: 58 centiseconds
 
 
 That concludes the debugging log from this run of Inform.

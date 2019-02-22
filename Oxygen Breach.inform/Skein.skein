@@ -14,7 +14,27 @@ Release 1 / Serial number 190220 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Control Center
 ...
 
-You can see a Commander here.
+You can see Commander here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1003"></child>
+        </children>
+    </item>
+    <item nodeId="node-1003">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1004"></child>
+        </children>
+    </item>
+    <item nodeId="node-1004">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Main Room
+...
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -22,8 +42,10 @@ You can see a Commander here.
         </children>
     </item>
     <item nodeId="node-1005">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">You can't go that way.
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Utility Room
+...
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -31,7 +53,7 @@ You can see a Commander here.
         </children>
     </item>
     <item nodeId="node-1006">
-        <command xml:space="preserve">s</command>
+        <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Main Room
 ...
@@ -42,28 +64,6 @@ Main Room
         </children>
     </item>
     <item nodeId="node-1007">
-        <command xml:space="preserve">s</command>
-        <result xml:space="preserve">
-Utility Room
-...
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1011"></child>
-        </children>
-    </item>
-    <item nodeId="node-1011">
-        <command xml:space="preserve">n</command>
-        <result xml:space="preserve">
-Main Room
-...
-
-&gt;</result>
-        <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1012"></child>
-        </children>
-    </item>
-    <item nodeId="node-1012">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 West Wing
@@ -71,10 +71,10 @@ West Wing
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1013"></child>
+        <children><child nodeId="node-1008"></child>
         </children>
     </item>
-    <item nodeId="node-1013">
+    <item nodeId="node-1008">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Main Room
@@ -82,10 +82,10 @@ Main Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1014"></child>
+        <children><child nodeId="node-1009"></child>
         </children>
     </item>
-    <item nodeId="node-1014">
+    <item nodeId="node-1009">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 East Wing
@@ -93,19 +93,19 @@ East Wing
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1015"></child>
+        <children><child nodeId="node-1010"></child>
         </children>
     </item>
-    <item nodeId="node-1015">
+    <item nodeId="node-1010">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1016"></child>
+        <children><child nodeId="node-1011"></child>
         </children>
     </item>
-    <item nodeId="node-1016">
+    <item nodeId="node-1011">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Main Room
