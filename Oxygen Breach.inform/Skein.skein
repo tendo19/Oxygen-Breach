@@ -9,7 +9,7 @@
 
 Oxygen Breach
 An Interactive Fiction by tendo19
-Release 1 / Serial number 190220 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190222 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Control Center
 ...
@@ -19,7 +19,98 @@ You can see Commander here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1003"></child>
+            <child nodeId="node-1014"></child>
         </children>
+    </item>
+    <item nodeId="node-1014">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Main Room
+...
+
+You can see Aerospace Engineer here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1029"></child>
+            <child nodeId="node-1022"></child>
+            <child nodeId="node-1016"></child>
+        </children>
+    </item>
+    <item nodeId="node-1016">
+        <command xml:space="preserve">talk to engineer</command>
+        <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1020"></child>
+            <child nodeId="node-1017"></child>
+            <child nodeId="node-1027"></child>
+        </children>
+    </item>
+    <item nodeId="node-1027">
+        <command xml:space="preserve">talking to engineer</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1017">
+        <command xml:space="preserve">talk to aerospace engineer</command>
+        <result xml:space="preserve">You must supply a noun.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1020">
+        <command xml:space="preserve">erer</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1022">
+        <command xml:space="preserve">talk to aerospace engineer</command>
+        <result xml:space="preserve">You must supply a noun.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1023"></child>
+        </children>
+    </item>
+    <item nodeId="node-1023">
+        <command xml:space="preserve">x enginerr</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1024"></child>
+        </children>
+    </item>
+    <item nodeId="node-1024">
+        <command xml:space="preserve">x engineer</command>
+        <result xml:space="preserve">...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1029">
+        <command xml:space="preserve">ask engineer</command>
+        <result xml:space="preserve">(for Aerospace Engineer)
+(Aerospace Engineer first taking Aerospace Engineer)
+Aerospace Engineer has better things to do.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1030"></child>
+        </children>
+    </item>
+    <item nodeId="node-1030">
+        <command xml:space="preserve">talk to engineer</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1003">
         <command xml:space="preserve">n</command>
@@ -36,9 +127,12 @@ You can see Commander here.
 Main Room
 ...
 
+You can see Aerospace Engineer here.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1005"></child>
+        <children><child nodeId="node-1033"></child>
+            <child nodeId="node-1005"></child>
         </children>
     </item>
     <item nodeId="node-1005">
@@ -110,6 +204,13 @@ East Wing
         <result xml:space="preserve">
 Main Room
 ...
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1033">
+        <command xml:space="preserve">ask engineer about the leak</command>
+        <result xml:space="preserve">"I know the tools you need to fix it. You need to be quick though," he says.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
