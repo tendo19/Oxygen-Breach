@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<Skein rootNode="node-1002">
+<Skein rootNode="node-1098">
     <generator>Inform Mac Client (Inform version 1.65/6.33/6M62)</generator>
-    <item nodeId="node-1002">
+    <item nodeId="node-1098">
         <command xml:space="preserve">Oxygen Breach</command>
         <result xml:space="preserve">
 
@@ -11,38 +11,121 @@ A minature meteorite just collided with the east wing! There's a major fracture 
 
 Oxygen Breach
 An Interactive Fiction by tendo19
-Release 1 / Serial number 190227 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190228 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Control Center
 There's a control panel alongside the wall. It controls everything that occurs in the space station.
 
-You can see Commander here.
+You can see Commander and a control panel here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1062"></child>
-            <child nodeId="node-1003"></child>
+        <children><child nodeId="node-1162"></child>
+            <child nodeId="node-1099"></child>
+            <child nodeId="node-1200"></child>
+            <child nodeId="node-1195"></child>
         </children>
     </item>
-    <item nodeId="node-1003">
+    <item nodeId="node-1195">
+        <command xml:space="preserve">x control panel</command>
+        <result xml:space="preserve">This is where you control everything that occurs in the station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1196"></child>
+        </children>
+    </item>
+    <item nodeId="node-1196">
+        <command xml:space="preserve">push button</command>
+        <result xml:space="preserve">you pushed the button and heard a click.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1197"></child>
+        </children>
+    </item>
+    <item nodeId="node-1197">
+        <command xml:space="preserve">push button</command>
+        <result xml:space="preserve">Stop button mashing and get on with your mission.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1198"></child>
+        </children>
+    </item>
+    <item nodeId="node-1198">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Main Room
-...
+This is the largest room in the station. There is one room to the west and the utility room is to the south. There is a leak in the east wing, so enter with caution.
 
 You can see Aerospace Engineer, a warning sign and a picture frame here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1060"></child>
-            <child nodeId="node-1056"></child>
-            <child nodeId="node-1078"></child>
-            <child nodeId="node-1053"></child>
-            <child nodeId="node-1048"></child>
-            <child nodeId="node-1004"></child>
+        <children><child nodeId="node-1199"></child>
         </children>
     </item>
-    <item nodeId="node-1004">
+    <item nodeId="node-1199">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Utility Room
+This is where all the tools are kept. The main room is to the north.
+
+You can see a toolbox (closed) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1200">
+        <command xml:space="preserve">talk to commander</command>
+        <result xml:space="preserve">You must supply a noun.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1201"></child>
+        </children>
+    </item>
+    <item nodeId="node-1201">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Main Room
+This is the largest room in the station. There is one room to the west and the utility room is to the south. There is a leak in the east wing, so enter with caution.
+
+You can see Aerospace Engineer, a warning sign and a picture frame here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1202"></child>
+        </children>
+    </item>
+    <item nodeId="node-1202">
+        <command xml:space="preserve">talk to aerospace engineer</command>
+        <result xml:space="preserve">"Do you know how to fix the leak in the east wing?" you ask, "I know the tools you need to fix it. You need to be quick though," he replies, you comment, "What do I need to fix the leak?" "You need a wrench, screws and bolts, and a hammer."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1099">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Main Room
+This is the largest room in the station. There is one room to the west and the utility room is to the south. There is a leak in the east wing, so enter with caution.
+
+You can see Aerospace Engineer, a warning sign and a picture frame here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1160"></child>
+            <child nodeId="node-1156"></child>
+            <child nodeId="node-1188"></child>
+            <child nodeId="node-1152"></child>
+            <child nodeId="node-1149"></child>
+            <child nodeId="node-1144"></child>
+            <child nodeId="node-1100"></child>
+        </children>
+    </item>
+    <item nodeId="node-1100">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 West Wing
@@ -52,451 +135,456 @@ You can see a locker (closed) here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1044"></child>
-            <child nodeId="node-1009"></child>
-            <child nodeId="node-1005"></child>
+        <children><child nodeId="node-1140"></child>
+            <child nodeId="node-1105"></child>
+            <child nodeId="node-1101"></child>
         </children>
     </item>
-    <item nodeId="node-1005">
+    <item nodeId="node-1101">
         <command xml:space="preserve">x lockr</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1006"></child>
+        <children><child nodeId="node-1102"></child>
         </children>
     </item>
-    <item nodeId="node-1006">
+    <item nodeId="node-1102">
         <command xml:space="preserve">x locker</command>
         <result xml:space="preserve">This is the commander's locker. Enter the six-digit pin code to unlock it.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1007"></child>
+        <children><child nodeId="node-1103"></child>
         </children>
     </item>
-    <item nodeId="node-1007">
+    <item nodeId="node-1103">
         <command xml:space="preserve">123212</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1008"></child>
+        <children><child nodeId="node-1104"></child>
         </children>
     </item>
-    <item nodeId="node-1008">
+    <item nodeId="node-1104">
         <command xml:space="preserve">1234</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1009">
+    <item nodeId="node-1105">
         <command xml:space="preserve">x locker</command>
         <result xml:space="preserve">This is the commander's locker. Enter the six-digit pin code to unlock it.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1023"></child>
-            <child nodeId="node-1016"></child>
-            <child nodeId="node-1014"></child>
-            <child nodeId="node-1012"></child>
-            <child nodeId="node-1010"></child>
+        <children><child nodeId="node-1119"></child>
+            <child nodeId="node-1112"></child>
+            <child nodeId="node-1110"></child>
+            <child nodeId="node-1108"></child>
+            <child nodeId="node-1106"></child>
         </children>
     </item>
-    <item nodeId="node-1010">
+    <item nodeId="node-1106">
         <command xml:space="preserve">open locker</command>
         <result xml:space="preserve">It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1011"></child>
+        <children><child nodeId="node-1107"></child>
         </children>
     </item>
-    <item nodeId="node-1011">
+    <item nodeId="node-1107">
         <command xml:space="preserve">enter pin code</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1012">
+    <item nodeId="node-1108">
         <command xml:space="preserve">AAAA</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1013"></child>
+        <children><child nodeId="node-1109"></child>
         </children>
     </item>
-    <item nodeId="node-1013">
+    <item nodeId="node-1109">
         <command xml:space="preserve">dedede</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1014">
+    <item nodeId="node-1110">
         <command xml:space="preserve">1234</command>
         <result xml:space="preserve">**BUZZ**  Access granted
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1015"></child>
+        <children><child nodeId="node-1111"></child>
         </children>
     </item>
-    <item nodeId="node-1015">
+    <item nodeId="node-1111">
         <command xml:space="preserve">open locker</command>
         <result xml:space="preserve">You open the Locker.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1016">
+    <item nodeId="node-1112">
         <command xml:space="preserve">112098</command>
         <result xml:space="preserve">**BUZZ**  Access granted
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1021"></child>
-            <child nodeId="node-1020"></child>
-            <child nodeId="node-1017"></child>
+        <children><child nodeId="node-1117"></child>
+            <child nodeId="node-1116"></child>
+            <child nodeId="node-1113"></child>
         </children>
     </item>
-    <item nodeId="node-1017">
+    <item nodeId="node-1113">
         <command xml:space="preserve">open locker</command>
         <result xml:space="preserve">You open the locker, revealing Bolts, Duct tape and Astronaut suit.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1018"></child>
+        <children><child nodeId="node-1114"></child>
         </children>
     </item>
-    <item nodeId="node-1018">
+    <item nodeId="node-1114">
         <command xml:space="preserve">take astronaut suit</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1019"></child>
+        <children><child nodeId="node-1115"></child>
         </children>
     </item>
-    <item nodeId="node-1019">
+    <item nodeId="node-1115">
         <command xml:space="preserve">wear astronaut suit</command>
         <result xml:space="preserve">You put on Astronaut suit.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1020">
+    <item nodeId="node-1116">
         <command xml:space="preserve">oepn lcoker</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1021">
+    <item nodeId="node-1117">
         <command xml:space="preserve">112098</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1022"></child>
+        <children><child nodeId="node-1118"></child>
         </children>
     </item>
-    <item nodeId="node-1022">
+    <item nodeId="node-1118">
         <command xml:space="preserve">121212</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1023">
+    <item nodeId="node-1119">
         <command xml:space="preserve">1120</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1024"></child>
+        <children><child nodeId="node-1120"></child>
         </children>
     </item>
-    <item nodeId="node-1024">
+    <item nodeId="node-1120">
         <command xml:space="preserve">12</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1025"></child>
+        <children><child nodeId="node-1121"></child>
         </children>
     </item>
-    <item nodeId="node-1025">
+    <item nodeId="node-1121">
         <command xml:space="preserve">12</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1026"></child>
+        <children><child nodeId="node-1122"></child>
         </children>
     </item>
-    <item nodeId="node-1026">
+    <item nodeId="node-1122">
         <command xml:space="preserve">1</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1027"></child>
+        <children><child nodeId="node-1123"></child>
         </children>
     </item>
-    <item nodeId="node-1027">
+    <item nodeId="node-1123">
         <command xml:space="preserve">21</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1028"></child>
+        <children><child nodeId="node-1124"></child>
         </children>
     </item>
-    <item nodeId="node-1028">
+    <item nodeId="node-1124">
         <command xml:space="preserve">2</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1029"></child>
+        <children><child nodeId="node-1125"></child>
         </children>
     </item>
-    <item nodeId="node-1029">
+    <item nodeId="node-1125">
         <command xml:space="preserve">12</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1030"></child>
+        <children><child nodeId="node-1126"></child>
         </children>
     </item>
-    <item nodeId="node-1030">
+    <item nodeId="node-1126">
         <command xml:space="preserve">1</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1031"></child>
+        <children><child nodeId="node-1127"></child>
         </children>
     </item>
-    <item nodeId="node-1031">
+    <item nodeId="node-1127">
         <command xml:space="preserve">21</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1032"></child>
+        <children><child nodeId="node-1128"></child>
         </children>
     </item>
-    <item nodeId="node-1032">
+    <item nodeId="node-1128">
         <command xml:space="preserve">2</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1033"></child>
+        <children><child nodeId="node-1129"></child>
         </children>
     </item>
-    <item nodeId="node-1033">
+    <item nodeId="node-1129">
         <command xml:space="preserve">12</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1034"></child>
+        <children><child nodeId="node-1130"></child>
         </children>
     </item>
-    <item nodeId="node-1034">
+    <item nodeId="node-1130">
         <command xml:space="preserve">1</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1035"></child>
+        <children><child nodeId="node-1131"></child>
         </children>
     </item>
-    <item nodeId="node-1035">
+    <item nodeId="node-1131">
         <command xml:space="preserve">23</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1036"></child>
+        <children><child nodeId="node-1132"></child>
         </children>
     </item>
-    <item nodeId="node-1036">
+    <item nodeId="node-1132">
         <command xml:space="preserve">4</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1037"></child>
+        <children><child nodeId="node-1133"></child>
         </children>
     </item>
-    <item nodeId="node-1037">
+    <item nodeId="node-1133">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1038"></child>
+        <children><child nodeId="node-1134"></child>
         </children>
     </item>
-    <item nodeId="node-1038">
+    <item nodeId="node-1134">
         <command xml:space="preserve">23</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1039"></child>
+        <children><child nodeId="node-1135"></child>
         </children>
     </item>
-    <item nodeId="node-1039">
+    <item nodeId="node-1135">
         <command xml:space="preserve">423</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1040"></child>
+        <children><child nodeId="node-1136"></child>
         </children>
     </item>
-    <item nodeId="node-1040">
+    <item nodeId="node-1136">
         <command xml:space="preserve">4121</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1041"></child>
+        <children><child nodeId="node-1137"></child>
         </children>
     </item>
-    <item nodeId="node-1041">
+    <item nodeId="node-1137">
         <command xml:space="preserve">21</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1042"></child>
+        <children><child nodeId="node-1138"></child>
         </children>
     </item>
-    <item nodeId="node-1042">
+    <item nodeId="node-1138">
         <command xml:space="preserve">21</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1043"></child>
+        <children><child nodeId="node-1139"></child>
         </children>
     </item>
-    <item nodeId="node-1043">
+    <item nodeId="node-1139">
         <command xml:space="preserve">221212</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1044">
+    <item nodeId="node-1140">
         <command xml:space="preserve">open locker</command>
         <result xml:space="preserve">It seems to be locked.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1045"></child>
+        <children><child nodeId="node-1141"></child>
         </children>
     </item>
-    <item nodeId="node-1045">
+    <item nodeId="node-1141">
         <command xml:space="preserve">x locker</command>
         <result xml:space="preserve">This is the commander's locker. Enter the six-digit pin code to unlock it.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1046"></child>
+        <children><child nodeId="node-1142"></child>
         </children>
     </item>
-    <item nodeId="node-1046">
+    <item nodeId="node-1142">
         <command xml:space="preserve">112098</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1047"></child>
+        <children><child nodeId="node-1143"></child>
         </children>
     </item>
-    <item nodeId="node-1047">
+    <item nodeId="node-1143">
         <command xml:space="preserve">112098</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1048">
+    <item nodeId="node-1144">
         <command xml:space="preserve">talk to engineer</command>
         <result xml:space="preserve">I didn't understand that sentence.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1052"></child>
-            <child nodeId="node-1051"></child>
-            <child nodeId="node-1049"></child>
+        <children><child nodeId="node-1148"></child>
+            <child nodeId="node-1147"></child>
+            <child nodeId="node-1145"></child>
         </children>
     </item>
-    <item nodeId="node-1049">
+    <item nodeId="node-1145">
         <command xml:space="preserve">talking to engineer</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1050"></child>
+        <children><child nodeId="node-1146"></child>
         </children>
     </item>
-    <item nodeId="node-1050">
+    <item nodeId="node-1146">
         <command xml:space="preserve">talk to aerospace engineer</command>
         <result xml:space="preserve">You must supply a noun.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1051">
+    <item nodeId="node-1147">
         <command xml:space="preserve">talk to aerospace engineer</command>
         <result xml:space="preserve">You must supply a noun.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1052">
+    <item nodeId="node-1148">
         <command xml:space="preserve">erer</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1053">
+    <item nodeId="node-1149">
         <command xml:space="preserve">talk to aerospace engineer</command>
-        <result xml:space="preserve">You must supply a noun.
+        <result xml:space="preserve">"Do you know how to fix the leak in the east wing?" you ask
+
+"I know the tools you need to fix it. You need to be quick though," he replies, 
+ you comment, "What do I need to fix the leak?"
+
+"You need a screws and bolts, and some tape."
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1054"></child>
+        <children><child nodeId="node-1150"></child>
         </children>
     </item>
-    <item nodeId="node-1054">
+    <item nodeId="node-1150">
         <command xml:space="preserve">x enginerr</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1055"></child>
+        <children><child nodeId="node-1151"></child>
         </children>
     </item>
-    <item nodeId="node-1055">
+    <item nodeId="node-1151">
         <command xml:space="preserve">x engineer</command>
         <result xml:space="preserve">...
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1078">
+    <item nodeId="node-1152">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Utility Room
@@ -506,10 +594,10 @@ You can see a toolbox (closed) here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1079"></child>
+        <children><child nodeId="node-1153"></child>
         </children>
     </item>
-    <item nodeId="node-1079">
+    <item nodeId="node-1153">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Main Room
@@ -519,10 +607,10 @@ You can see Aerospace Engineer, a warning sign and a picture frame here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1080"></child>
+        <children><child nodeId="node-1154"></child>
         </children>
     </item>
-    <item nodeId="node-1080">
+    <item nodeId="node-1154">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 West Wing
@@ -532,51 +620,142 @@ You can see a locker (closed) here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1081"></child>
+        <children><child nodeId="node-1155"></child>
         </children>
     </item>
-    <item nodeId="node-1081">
+    <item nodeId="node-1155">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">You gasp for air. The door behind you closes. You die from hypoxia.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1056">
+    <item nodeId="node-1188">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Control Center
+There's a control panel alongside the wall. It controls everything that occurs in the space station.
+
+You can see Commander and a control panel here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1189"></child>
+        </children>
+    </item>
+    <item nodeId="node-1189">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Main Room
+This is the largest room in the station. There is one room to the west and the utility room is to the south. There is a leak in the east wing, so enter with caution.
+
+You can see Aerospace Engineer, a warning sign, a picture frame and Button here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1190"></child>
+        </children>
+    </item>
+    <item nodeId="node-1190">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+
+    *** You gasp for air. The door behind you closes. You die from hypoxia. ***
+
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1191"></child>
+        </children>
+    </item>
+    <item nodeId="node-1191">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">Please give one of the answers above.
+
+Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1192"></child>
+        </children>
+    </item>
+    <item nodeId="node-1192">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">
+
+
+A minature meteorite just collided with the east wing! There's a major fracture in the wall as well as several malfunctions in the oxygenating system. The east wing has been temporarily sealed off, but you must repair it or all the oxygen will escape.
+
+Oxygen Breach
+An Interactive Fiction by tendo19
+Release 1 / Serial number 190228 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Control Center
+There's a control panel alongside the wall. It controls everything that occurs in the space station.
+
+You can see Commander and a control panel here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1193"></child>
+        </children>
+    </item>
+    <item nodeId="node-1193">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Main Room
+This is the largest room in the station. There is one room to the west and the utility room is to the south. There is a leak in the east wing, so enter with caution.
+
+You can see Aerospace Engineer, a warning sign, a picture frame and Button here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-1194"></child>
+        </children>
+    </item>
+    <item nodeId="node-1194">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You have to push the button first.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1156">
         <command xml:space="preserve">ask the aerospace engineer</command>
         <result xml:space="preserve">What do you want to ask Aerospace Engineer for?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1057"></child>
+        <children><child nodeId="node-1157"></child>
         </children>
     </item>
-    <item nodeId="node-1057">
+    <item nodeId="node-1157">
         <command xml:space="preserve">the leak</command>
         <result xml:space="preserve">You can't see any such thing.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1058"></child>
+        <children><child nodeId="node-1158"></child>
         </children>
     </item>
-    <item nodeId="node-1058">
+    <item nodeId="node-1158">
         <command xml:space="preserve">leak</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1059"></child>
+        <children><child nodeId="node-1159"></child>
         </children>
     </item>
-    <item nodeId="node-1059">
+    <item nodeId="node-1159">
         <command xml:space="preserve">oops leak</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1060">
+    <item nodeId="node-1160">
         <command xml:space="preserve">ask engineer</command>
         <result xml:space="preserve">(for Aerospace Engineer)
 (Aerospace Engineer first taking Aerospace Engineer)
@@ -584,27 +763,27 @@ Aerospace Engineer has better things to do.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1061"></child>
+        <children><child nodeId="node-1161"></child>
         </children>
     </item>
-    <item nodeId="node-1061">
+    <item nodeId="node-1161">
         <command xml:space="preserve">talk to engineer</command>
         <result xml:space="preserve">That's not a verb I recognise.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1062">
+    <item nodeId="node-1162">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1083"></child>
-            <child nodeId="node-1063"></child>
+        <children><child nodeId="node-1172"></child>
+            <child nodeId="node-1163"></child>
         </children>
     </item>
-    <item nodeId="node-1063">
+    <item nodeId="node-1163">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Main Room
@@ -614,11 +793,11 @@ You can see Aerospace Engineer here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1071"></child>
-            <child nodeId="node-1064"></child>
+        <children><child nodeId="node-1171"></child>
+            <child nodeId="node-1164"></child>
         </children>
     </item>
-    <item nodeId="node-1064">
+    <item nodeId="node-1164">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Utility Room
@@ -626,10 +805,10 @@ Utility Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1065"></child>
+        <children><child nodeId="node-1165"></child>
         </children>
     </item>
-    <item nodeId="node-1065">
+    <item nodeId="node-1165">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">
 Main Room
@@ -637,10 +816,10 @@ Main Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1066"></child>
+        <children><child nodeId="node-1166"></child>
         </children>
     </item>
-    <item nodeId="node-1066">
+    <item nodeId="node-1166">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 West Wing
@@ -648,10 +827,10 @@ West Wing
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1067"></child>
+        <children><child nodeId="node-1167"></child>
         </children>
     </item>
-    <item nodeId="node-1067">
+    <item nodeId="node-1167">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Main Room
@@ -659,10 +838,10 @@ Main Room
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1068"></child>
+        <children><child nodeId="node-1168"></child>
         </children>
     </item>
-    <item nodeId="node-1068">
+    <item nodeId="node-1168">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 East Wing
@@ -670,19 +849,19 @@ East Wing
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1069"></child>
+        <children><child nodeId="node-1169"></child>
         </children>
     </item>
-    <item nodeId="node-1069">
+    <item nodeId="node-1169">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1070"></child>
+        <children><child nodeId="node-1170"></child>
         </children>
     </item>
-    <item nodeId="node-1070">
+    <item nodeId="node-1170">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 Main Room
@@ -691,32 +870,32 @@ Main Room
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1071">
+    <item nodeId="node-1171">
         <command xml:space="preserve">ask engineer about the leak</command>
         <result xml:space="preserve">"I know the tools you need to fix it. You need to be quick though," he says.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1083">
+    <item nodeId="node-1172">
         <command xml:space="preserve"></command>
         <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1084"></child>
+        <children><child nodeId="node-1173"></child>
         </children>
     </item>
-    <item nodeId="node-1084">
+    <item nodeId="node-1173">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">You can't go that way.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1085"></child>
+        <children><child nodeId="node-1174"></child>
         </children>
     </item>
-    <item nodeId="node-1085">
+    <item nodeId="node-1174">
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Main Room
@@ -726,10 +905,10 @@ You can see Aerospace Engineer, a warning sign and a picture frame here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1086"></child>
+        <children><child nodeId="node-1175"></child>
         </children>
     </item>
-    <item nodeId="node-1086">
+    <item nodeId="node-1175">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
 West Wing
@@ -739,71 +918,71 @@ You can see a locker (closed) here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1087"></child>
+        <children><child nodeId="node-1176"></child>
         </children>
     </item>
-    <item nodeId="node-1087">
+    <item nodeId="node-1176">
         <command xml:space="preserve">x locker</command>
         <result xml:space="preserve">This is the commander's locker. Enter the six-digit pin code to unlock it.
 
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1088"></child>
+        <children><child nodeId="node-1177"></child>
         </children>
     </item>
-    <item nodeId="node-1088">
+    <item nodeId="node-1177">
         <command xml:space="preserve">112089</command>
         <result xml:space="preserve">Incorrect pin, locker remains locked.
 
 Would you like to try again? (Yes or No) &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1089"></child>
+        <children><child nodeId="node-1178"></child>
         </children>
     </item>
-    <item nodeId="node-1089">
+    <item nodeId="node-1178">
         <command xml:space="preserve">yes</command>
         <result xml:space="preserve">
 Please enter the six-digit locker pin code. &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1090"></child>
+        <children><child nodeId="node-1179"></child>
         </children>
     </item>
-    <item nodeId="node-1090">
+    <item nodeId="node-1179">
         <command xml:space="preserve">112098</command>
         <result xml:space="preserve">**BUZZ**  Access granted
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1091"></child>
+        <children><child nodeId="node-1180"></child>
         </children>
     </item>
-    <item nodeId="node-1091">
+    <item nodeId="node-1180">
         <command xml:space="preserve">open locker</command>
         <result xml:space="preserve">You open the locker, revealing Bolts, Duct tape and Astronaut suit.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1092"></child>
+        <children><child nodeId="node-1181"></child>
         </children>
     </item>
-    <item nodeId="node-1092">
+    <item nodeId="node-1181">
         <command xml:space="preserve">take astronaut suit</command>
         <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1093"></child>
+        <children><child nodeId="node-1182"></child>
         </children>
     </item>
-    <item nodeId="node-1093">
+    <item nodeId="node-1182">
         <command xml:space="preserve">wear astronaut suit</command>
         <result xml:space="preserve">You put on Astronaut suit.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1094"></child>
+        <children><child nodeId="node-1183"></child>
         </children>
     </item>
-    <item nodeId="node-1094">
+    <item nodeId="node-1183">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">
 Main Room
@@ -813,10 +992,10 @@ You can see Aerospace Engineer, a warning sign and a picture frame here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1095"></child>
+        <children><child nodeId="node-1184"></child>
         </children>
     </item>
-    <item nodeId="node-1095">
+    <item nodeId="node-1184">
         <command xml:space="preserve">e</command>
         <result xml:space="preserve">The oxygen level is critical. Repair the damage immediately!
 

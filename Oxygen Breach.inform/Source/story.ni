@@ -26,6 +26,7 @@ Commander is a man in the control center.
 The description of the commander is "This is the guy in charge. He probably knows a thing or two about this place."
 
 Aerospace Engineer is a man in the main room.
+Understand "engineer" as the aerospace engineer.
 The description of the aerospace engineer is "He specializes in engineering and knowing about spaceships. "
 
 
@@ -75,18 +76,17 @@ The picture frame is an object in the main room.
 It is not portable.
 The description of the picture frame is "You see a photo of the ISS and a caption saying, 'The ISS was launched in November 20, 1998.'"
 
-The wall is a thing in the east wing.
-The description of the wall is "There is a huge crack and a couple bolts are loose or missing. There has to be some way to repair this ... or we will all die."
-
-The oxygenation tank is a thing in the east wing. 
-The description of the oxygenation tank is "The impact of the meteorite must have caused it to malfunction. There are some loose components ... they must be put back together."
-
 The metal panel is a thing in the east wing.
 The description of the metal panel is "This needs to go back onto the oxygenation tank for it to function properly."
 
 The Locker is in the west wing.
 It is a closed openable container. 
 It is locked and lockable.
+The locker is not portable.
+
+The control panel is a thing in the control center.
+The control panel is not portable.
+The description is "It's covered with knobs, buttons, screens, and a bunch of flickering lights. You aren't sure what anything does."
 
 The description of the locker is "This is the commander's locker. Enter the six-digit pin code to unlock it."
 	After examining the locker:
@@ -124,7 +124,8 @@ Instead of going east:
 	if the player is wearing astronaut suit:
 		say "The oxygen level is critical. Repair the damage immediately!";
 	otherwise:
-		say "You gasp for air. The door behind you closes. You die from hypoxia."
+		end the story finally saying "You gasp for air. The door behind you closes. You die from hypoxia."
+		
 
 
 
@@ -156,4 +157,77 @@ Instead of going east:
 		say "You cover the tiny crack with a bunch of duct tape. Now the wall is sealed.";
 		remove duct tape from play.]
 
+
+Button is a thing.
+The button is part of the control panel.
+The button is not portable.
+Instead of pushing button: 
+	if the button is not handled:
+		say "you pushed the button and heard a click.";
+		now the button is handled;
+	otherwise:
+		say "Stop button mashing and get on with your mission."
+	
+Instead of going to West Wing when the button is not handled:
+	say "You have to open the door from the control center.".
+	
+Instead of going to Utility Room when the button is not handled:
+	say "You have to open the door from the control center.".
+
+
+
+[The code below is a duplicate of code further down that has a longer response, so I commented it out.]
+[Instead of talking to the aerospace engineer: 
+	say "'I know the tools you need to fix it. You need to be quick though,' he says."]
+		
+Understand "talk to [someone]" as talking to. Understand "talk to [something]" as talking to. Talking to is an action applying to one visible thing.
+
+Understand "talk to aerospace engineer" or "converse with aerospace engineer" as talking to.
+
+Understand "talk to commander" or "converse with commander" as talking to.
+
+Instead of talking to aerospace engineer: say "'Do you know how to fix the leak in the east wing?' you ask.[paragraph break]'I know the tools you need to fix it. You need to be quick though,' he replies. [paragraph break] You say, 'What do I need to fix the leak?'[paragraph break]'You need a screws and bolts, and some tape.'"
+
+Instead of talking to commander: say "'Hey, how are you?' you say.[paragraph break]'I'm panicking!!,' he replies. [paragraph break] You say, 'What do I need to fix the leak?'[paragraph break]'Don't ask me!.'"
+
+
+Instead of talking to someone:
+	say "They don't answer you."
+
+
+
+
+[Making the wall a supporter allows for the player to put things on it. Make the wall not portable so the player cannot take it.]
+[You can add conditionals to your descriptions (see below) so the descriptions change based on what has happened in the story.]
+
+
+The wall is a thing in the east wing.
+The wall is a supporter.
+The wall is not portable.
+The description of the wall is "[If duct tape is not on wall] There is a huge crack that must be covered.[end if] There has to be some way to repair this ... or we will all die."
+
+
+
+The oxygenation tank is a thing in the east wing. 
+The oxygenation tank is a supporter.
+The oxygenation tank is not portable.
+The description of the oxygenation tank is "The impact of the meteorite must have caused it to malfunction. [if metal panel is not on oxygenation tank] There are some loose components ... they must be put back together.[end if]"
+
+
+
+
+
+[Use the After command here, so this triggers after the duct tape is on the wall.]
+After putting duct tape on wall:
+	say "You put the duct tape over the crack on the wall. Luckily you had just enough to cover the crack.".
+
+[This code prevents the player from taking the duct tape off of the wall.]
+Instead of taking duct tape when duct tape is on wall:
+	say "Why would you want to do that? The duct tape is covering the crack quite nicely and you have other things to do, so get on with it, already!"
+
+
+[endgame
+
+If :
+End story finally saying "Despite your lack of knowledge about the space station, you were able to save everyone onboard from facing a catastrophic fate. Good Job!"]
 
