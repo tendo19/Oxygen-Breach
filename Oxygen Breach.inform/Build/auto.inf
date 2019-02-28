@@ -12266,6 +12266,27 @@ Array ActionHappened --> 0 0 0 0 0;
 ! ----------------------------------------------------------------------------------------------------
 
 ! ----------------------------------------------------------------------------------------------------
+! Rules in rulebook: Every turn (B8_every_turn)
+! ----------------------------------------------------------------------------------------------------
+! Rule 1/1 ! An every turn rule:
+! ----------------------------------------------------------------------------------------------------
+! No specific request
+! An every turn rule:
+[ R_812 ;
+    if (debug_rules) DB_Rule(R_812, 812);
+    ! [2: if metal panel is on the oxygenation tank]
+    if (((I144_oxygenation_tank == SupporterOf(I140_metal_panel))))
+    {! [3: if duct tape is on the wall]
+        if (((I143_wall == SupporterOf(I137_duct_tape))))
+        {! [4: end the story saying ~Despite your lack of knowledge about the space station, you were able to save everyone onboard from facing a catastrophic fate. Good Job!~]
+            deadflag=TX_L_77; story_complete=false;
+            }
+            }
+            rfalse;
+];
+! ----------------------------------------------------------------------------------------------------
+
+! ----------------------------------------------------------------------------------------------------
 ! Rules in rulebook: Action-processing (B9_action_processing)
 ! ----------------------------------------------------------------------------------------------------
 ! Rule 1/11 ! This is the announce items from multiple object lists rule:
@@ -12748,7 +12769,7 @@ Array ActionHappened --> 0 0 0 0 0;
         say__p=1;! [4: ~The oxygen level is critical. Repair the damage immediately!~]
         ParaContent(); print "The oxygen level is critical. Repair the damage immediately!"; new_line; .L_Say7; .L_SayX7;} else {
         ! [5: end the story finally saying ~You gasp for air. The door behind you closes. You die from hypoxia.~]
-        deadflag=TX_L_77; story_complete=true;
+        deadflag=TX_L_78; story_complete=true;
         }
         RulebookFails(); rtrue;
         } else if (debug_rules > 1) DB_Rule(R_803, 803, 'action');
@@ -12798,13 +12819,13 @@ Array ActionHappened --> 0 0 0 0 0;
     if ((((action ==##A77_talking_to) &&  (actor==player) && ((noun == I130_commander) && (true))))) { ! Runs only when pattern matches
     self = noun;
     if (debug_rules) DB_Rule(R_808, 808);
-    ! [2: say ~'Hey, how are you?' you say.[paragraph break]'I'm panicking!!,' he replies. [paragraph break] You say, 'What do I need to fix the leak?'[paragraph break]'Don't ask me!.'~]
+    ! [2: say ~'Hey, how are you?' you say.[paragraph break]'I'm panicking!!,' he replies. [paragraph break] You say, 'How do I fix the leak?'[paragraph break]'Don't ask me!.'~]
     say__p=1;! [3: ~'Hey, how are you?' you say.~]
     ParaContent(); print "~Hey, how are you?~ you say.";! [4: paragraph break]
     ParaContent(); DivideParagraphPoint(); new_line;! [5: ~'I'm panicking!!,' he replies. ~]
     ParaContent(); print "~I'm panicking!!,~ he replies. ";! [6: paragraph break]
-    ParaContent(); DivideParagraphPoint(); new_line;! [7: ~ You say, 'What do I need to fix the leak?'~]
-    ParaContent(); print " You say, ~What do I need to fix the leak?~";! [8: paragraph break]
+    ParaContent(); DivideParagraphPoint(); new_line;! [7: ~ You say, 'How do I fix the leak?'~]
+    ParaContent(); print " You say, ~How do I fix the leak?~";! [8: paragraph break]
     ParaContent(); DivideParagraphPoint(); new_line;! [9: ~'Don't ask me!.'~]
     ParaContent(); print "~Don't ask me!.~"; new_line; .L_Say11; .L_SayX11;RulebookFails(); rtrue;
     } else if (debug_rules > 1) DB_Rule(R_808, 808, 'action');
@@ -12850,7 +12871,7 @@ Array ActionHappened --> 0 0 0 0 0;
     self = noun;
     if (debug_rules) DB_Rule(R_800, 800);
     ! [2: now the command prompt is ~Please enter the six-digit locker pin code. >~]
-    BlkValueCopy((Global_Vars-->1), TX_L_78);
+    BlkValueCopy((Global_Vars-->1), TX_L_79);
     ! [3: continue the action]
     rfalse;
     RulebookSucceeds(); rtrue;
@@ -12990,7 +13011,7 @@ Array ActionHappened --> 0 0 0 0 0;
 ! No specific request
 ! After reading a command when the command prompt is ~Please enter the six-digit locker pin code. >~:
 [ R_801 ;
-    if (((((( BlkValueCompare((Global_Vars-->1), TX_L_78) == 0)))))) { ! Runs only while condition holds
+    if (((((( BlkValueCompare((Global_Vars-->1), TX_L_79) == 0)))))) { ! Runs only while condition holds
     if (debug_rules) DB_Rule(R_801, 801);
     ! [2: increment the turn count]
     turns = turns + 1;;
@@ -13006,7 +13027,7 @@ Array ActionHappened --> 0 0 0 0 0;
         ! [8: say ~Incorrect pin, locker remains locked.~]
         say__p=1;! [9: ~Incorrect pin, locker remains locked.~]
         ParaContent(); print "Incorrect pin, locker remains locked."; new_line; .L_Say17; .L_SayX17;! [10: now the command prompt is ~Would you like to try again? (Yes or No) >~]
-        BlkValueCopy((Global_Vars-->1), TX_L_79);
+        BlkValueCopy((Global_Vars-->1), TX_L_80);
         }
     ! [11: reject the player's command]
     RulebookFails(); rtrue;
@@ -13016,12 +13037,12 @@ Array ActionHappened --> 0 0 0 0 0;
 ! No specific request
 ! After reading a command when the command prompt is ~Would you like to try again? (Yes or No) >~:
 [ R_802 ;
-    if (((((( BlkValueCompare((Global_Vars-->1), TX_L_79) == 0)))))) { ! Runs only while condition holds
+    if (((((( BlkValueCompare((Global_Vars-->1), TX_L_80) == 0)))))) { ! Runs only while condition holds
     if (debug_rules) DB_Rule(R_802, 802);
     ! [2: if the player's command matches ~yes~ or the player's command matches ~y~]
     if ((((SnippetMatches(players_command, Consult_Grammar_103)))) || (((SnippetMatches(players_command, Consult_Grammar_104)))))
     {! [3: now the command prompt is ~Please enter the six-digit locker pin code. >~]
-        BlkValueCopy((Global_Vars-->1), TX_L_78);
+        BlkValueCopy((Global_Vars-->1), TX_L_79);
         ! [4: say line break]
         say__p=1;! [5: line break]
         ParaContent(); new_line; .L_Say18; .L_SayX18;! [6: say run paragraph on]
@@ -21899,7 +21920,18 @@ Constant B5_when_play_ends = EMPTY_RULEBOOK;
     return 0; ! 1 rule(s)
 ];
 Constant B7_when_scene_ends = EMPTY_RULEBOOK;
-Constant B8_every_turn = EMPTY_RULEBOOK;
+[ B8_every_turn 
+    forbid_breaks ! Implied call parameter
+    rv ! return value
+    ;
+    rv = R_812();
+    if (rv) {
+        if (rv == 2) return reason_the_action_failed;
+        return R_812;
+    }
+    latest_rule_result-->0 = 0;
+    return 0; ! 1 rule(s)
+];
 [ B9_action_processing 
     forbid_breaks ! Implied call parameter
     rv ! return value
@@ -30229,6 +30261,7 @@ Array RulebookNames -->
         if (R == R_809) { print "Instead of talking to someone"; rtrue; } ! rule 358
         if (R == R_810) { print "After putting duct tape on wall"; rtrue; } ! rule 359
         if (R == R_811) { print "Instead of taking duct tape when duct tape is on wall"; rtrue; } ! rule 360
+        if (R == R_812) { print "An every turn rule"; rtrue; } ! rule 361
 
 		print "(nameless rule at address ", R, ")";
 	}
@@ -49773,6 +49806,8 @@ Constant TX_PS_69 = "Button";
 Constant TX_PS_36 = "Commander";
 Constant TX_PS_34 = "Control Center";
 Constant TX_PS_45 = "DO NOT ENTER EAST WING WITHOUT PROPER GEAR. NO OXYGEN!!";
+Constant TX_PS_77 = "Despite your lack of knowledge about the space station, you were able to save everyone onboard from facing a catastrophic fate. Good Job!";
+Array TX_L_77 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_77;
 Constant TX_PS_60 = "Duct tape";
 Constant TX_PS_63 = "East Wing";
 Constant TX_PS_71 = "Fiction";
@@ -49780,14 +49815,14 @@ Constant TX_PS_43 = "He specializes in engineering and knowing about spaceships.
 Constant TX_PS_39 = "It's covered with knobs, buttons, screens, and a bunch of flickering lights. You aren't sure what anything does.";
 Constant TX_PS_40 = "Main Room";
 Constant TX_PS_2 = "Oxygen Breach";
-Constant TX_PS_78 = "Please enter the six-digit locker pin code. >";
-Array TX_L_78 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_78;
+Constant TX_PS_79 = "Please enter the six-digit locker pin code. >";
+Array TX_L_79 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_79;
 Constant TX_PS_75 = "QUIT";
 Constant TX_PS_72 = "RESTART";
 Constant TX_PS_73 = "RESTORE a saved game";
 Constant TX_PS_52 = "Screws";
 Constant TX_PS_55 = "There is nothing much here ... except the commander's locker. The main room is to the east.";
-Constant TX_PS_35 = "There's a control panel alongside the wall. It controls everything that occurs in the space station.";
+Constant TX_PS_35 = "There's a control panel alongside the wall. It controls everything that occurs in the space station. The main room is to the south.";
 Constant TX_PS_57 = "This is the commander's locker. Enter the six-digit pin code to unlock it.";
 Constant TX_PS_37 = "This is the guy in charge. He probably knows a thing or two about this place.";
 Constant TX_PS_41 = "This is the largest room in the station. There is one room to the west and the utility room is to the south. There is a leak in the east wing, so enter with caution.";
@@ -49797,10 +49832,10 @@ Constant TX_PS_76 = "UNDO the last command";
 Constant TX_PS_48 = "Utility Room";
 Constant TX_PS_62 = "Wear this when you are anywhere with no oxygen.";
 Constant TX_PS_54 = "West Wing";
-Constant TX_PS_79 = "Would you like to try again? (Yes or No) >";
-Array TX_L_79 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_79;
-Constant TX_PS_77 = "You gasp for air. The door behind you closes. You die from hypoxia.";
-Array TX_L_77 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_77;
+Constant TX_PS_80 = "Would you like to try again? (Yes or No) >";
+Array TX_L_80 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_80;
+Constant TX_PS_78 = "You gasp for air. The door behind you closes. You die from hypoxia.";
+Array TX_L_78 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_78;
 Constant TX_PS_47 = "You see a photo of the ISS and a caption saying, ~The ISS was launched in November 20, 1998.~";
 Constant TX_PS_59 = "You'll need this to fix the leak.";
 Constant TX_PS_53 = "You'll need to fix the leak.";

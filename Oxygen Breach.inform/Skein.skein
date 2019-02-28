@@ -14,7 +14,7 @@ An Interactive Fiction by tendo19
 Release 1 / Serial number 190228 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Control Center
-There's a control panel alongside the wall. It controls everything that occurs in the space station.
+There's a control panel alongside the wall. It controls everything that occurs in the space station. The main room is to the south.
 
 You can see Commander and a control panel here.
 
@@ -23,6 +23,7 @@ You can see Commander and a control panel here.
         <children><child nodeId="node-1162"></child>
             <child nodeId="node-1099"></child>
             <child nodeId="node-1200"></child>
+            <child nodeId="node-1205"></child>
             <child nodeId="node-1195"></child>
         </children>
     </item>
@@ -73,6 +74,19 @@ Utility Room
 This is where all the tools are kept. The main room is to the north.
 
 You can see a toolbox (closed) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1205">
+        <command xml:space="preserve">talk to the commander</command>
+        <result xml:space="preserve">"Hey, how are you?" you say.
+
+"I'm panicking!!," he replies. 
+
+ You say, "What do I need to fix the leak?"
+
+"Don't ask me!."
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

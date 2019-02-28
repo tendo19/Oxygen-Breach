@@ -4,7 +4,7 @@ When play begins: say "A minature meteorite just collided with the east wing! Th
 
 Control Center is a room. 
 It is north of the Main Room.
-The description of Control Center is "There's a control panel alongside the wall. It controls everything that occurs in the space station."
+The description of Control Center is "There's a control panel alongside the wall. It controls everything that occurs in the space station. The main room is to the south."
 
 Main Room is a room.
 It is south of the Control Center.
@@ -188,7 +188,7 @@ Understand "talk to commander" or "converse with commander" as talking to.
 
 Instead of talking to aerospace engineer: say "'Do you know how to fix the leak in the east wing?' you ask.[paragraph break]'I know the tools you need to fix it. You need to be quick though,' he replies. [paragraph break] You say, 'What do I need to fix the leak?'[paragraph break]'You need a screws and bolts, and some tape.'"
 
-Instead of talking to commander: say "'Hey, how are you?' you say.[paragraph break]'I'm panicking!!,' he replies. [paragraph break] You say, 'What do I need to fix the leak?'[paragraph break]'Don't ask me!.'"
+Instead of talking to commander: say "'Hey, how are you?' you say.[paragraph break]'I'm panicking!!,' he replies. [paragraph break] You say, 'How do I fix the leak?'[paragraph break]'Don't ask me!.'"
 
 
 Instead of talking to someone:
@@ -226,8 +226,16 @@ Instead of taking duct tape when duct tape is on wall:
 	say "Why would you want to do that? The duct tape is covering the crack quite nicely and you have other things to do, so get on with it, already!"
 
 
-[endgame
 
-If :
-End story finally saying "Despite your lack of knowledge about the space station, you were able to save everyone onboard from facing a catastrophic fate. Good Job!"]
+
+[An every turn rule:
+If metal panel is on the oxygenation tank:
+		End story finally saying "Despite your lack of knowledge about the space station, you were able to save everyone onboard from facing a catastrophic fate. Good Job!"]
+
+
+An every turn rule:
+	if metal panel is on the oxygenation tank:
+		if duct tape is on the wall:
+			end the story saying "Despite your lack of knowledge about the space station, you were able to save everyone onboard from facing a catastrophic fate. Good Job!".
+
 
