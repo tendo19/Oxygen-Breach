@@ -134,16 +134,22 @@ Instead of pushing button:
 		say "Stop button mashing and get on with your mission."
 	
 Instead of going to West Wing when the button is not handled:
-	say "Access denied: Push button from control center to gain access.".
+	say "Access denied: go to control center to gain access.".
 	
 Instead of going to Utility Room when the button is not handled:
-	say "Access denied: Push button from control center to gain access.".
+	say "Access denied: go to control center to gain access.".
 
 
 Knobs is a thing.
 The knobs is part of the control panel.
 The description of the knobs is "You aren't sure what it does ... better if you leave it alone."
 Understand "knob" as knobs.
+
+
+Knob-turning is an action applying to one thing. Understand "turn [something]" and "turning [something]" as knob-turning.
+	
+Instead of knob-turning:
+	say "You shouldn't be touching this."
 
 Screen is a thing.
 The screen is part of the control panel.
@@ -165,7 +171,7 @@ Understand "talk to aerospace engineer" or "converse with aerospace engineer" as
 
 Understand "talk to commander" or "converse with commander" as talking to.
 
-Instead of talking to aerospace engineer: say "'Do you know how to fix the leak in the east wing?' you ask.[paragraph break]'I know the tools you need to fix it. You need to be quick though,' he replies. [paragraph break] You say, 'What do I need to fix the leak?'[paragraph break]'You need a screws and bolts, and some tape.'"
+Instead of talking to aerospace engineer: say "'Do you know how to fix the leak in the east wing?' you ask.[paragraph break]'I know the tools you need to fix it. You need to be quick though,' he replies. [paragraph break] You say, 'What do I need to fix the leak?'[paragraph break]'You need screws, bolts, and some tape.'"
 
 Instead of talking to commander: say "'Hey, how are you?' you say.[paragraph break]'I'm panicking!!,' he replies. [paragraph break] You say, 'How do I fix the leak?'[paragraph break]'Don't ask me!.'"
 
@@ -235,15 +241,15 @@ Instead of putting metal panel on tank:
 		say "You need to put both the screws and the bolts on the tank first."
 
 Every turn rule:
-	if player has been in East Wing for 3 turns:
+	if player has been in East Wing for exactly 3 turns:
 		say "Astronaut Suit Oxygen Level: 90%";
-	if player has been in East Wing for 6 turns:
+	if player has been in East Wing for exactly 6 turns:
 		say "Astronaut Suit Oxygen Level: 60%";
-	if player has been in East Wing for 9 turns:
+	if player has been in East Wing for exactly 9 turns:
 		say "Astronaut Suit Oxygen Level: 30%";
-	if player has been in East Wing for 12 turns:
+	if player has been in East Wing for exactly 12 turns:
 		say "ASTRONAUT SUIT OXYGEN LEVEL: 10%";
-	if player has been in East Wing for 13 turns:
+	if player has been in East Wing for exactly 13 turns:
 		say "ASTRONAUT SUIT OXYGEN LEVEL: 5%".
 
 
@@ -258,3 +264,28 @@ Every turn rule:
 
 
 The description of player is "You are a random person who got chosen to take a tour on the ISS. This is a once in a lifetime oppurtunity so you gladly accept the offer."
+
+
+[how to win:
+
+x control panel
+push button
+s
+s
+open toolbox
+take all
+n
+w
+x locker
+112098
+open locker
+take all
+wear astronaut suit
+e
+e
+yes
+put duct tape on wall
+put screws on tank
+put bolts on tank
+take metal panel
+put panel on tank]
