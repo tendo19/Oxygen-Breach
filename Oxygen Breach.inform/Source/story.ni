@@ -111,10 +111,6 @@ After going east from Main Room:
 	otherwise:
 		end the story finally saying "You gasp for air. The door behind you closes. You die from hypoxia."
 	
-
-
-
-
 Instead of going to east wing:
 	Say "Are you sure you want to enter?";
 	If player consents:
@@ -138,10 +134,10 @@ Instead of pushing button:
 		say "Stop button mashing and get on with your mission."
 	
 Instead of going to West Wing when the button is not handled:
-	say "You have to open the door from the control center.".
+	say "Access denied: Push button from control center to gain access.".
 	
 Instead of going to Utility Room when the button is not handled:
-	say "You have to open the door from the control center.".
+	say "Access denied: Push button from control center to gain access.".
 
 
 Knobs is a thing.
@@ -157,7 +153,6 @@ Lights is a thing.
 The lights is part of the control panel.
 The description of lights is "You are mesmerized by the colorful lights but have no clue what they mean."
 Understand "flickering lights" as lights.
-
 
 
 [The code below is a duplicate of code further down that has a longer response, so I commented it out.]
@@ -227,12 +222,36 @@ Instead of putting bolts on wall:
 Instead of putting duct tape on oxygenation tank:
 	say "Duct tape doesn't fix everything!!"
 
+Instead of putting metal panel on wall:
+	say "That should go on the oxygenation tank."
 
-[Instead of putting metal panel on oxygentation tank: 
-	if the screws and bolts are not on oxygentation tank:
-		say "It won't fit unless you put something else in first.".]
+Instead of putting metal panel on tank:
+	if screws are on tank:
+		if bolts are on tank:
+			continue the action;
+		otherwise:
+			say "You need to put both the screws and the bolts on the tank first.";
+	otherwise:
+		say "You need to put both the screws and the bolts on the tank first."
 
-An every turn rule:
+Every turn rule:
+	if player has been in East Wing for 3 turns:
+		say "Astronaut Suit Oxygen Level: 90%";
+	if player has been in East Wing for 6 turns:
+		say "Astronaut Suit Oxygen Level: 60%";
+	if player has been in East Wing for 9 turns:
+		say "Astronaut Suit Oxygen Level: 30%";
+	if player has been in East Wing for 12 turns:
+		say "ASTRONAUT SUIT OXYGEN LEVEL: 10%";
+	if player has been in East Wing for 13 turns:
+		say "ASTRONAUT SUIT OXYGEN LEVEL: 5%".
+
+
+Every turn rule:
+	if player has been in East Wing for 14 turns:
+		end the story saying "You gasp for air. The door behind you closes. You die from hypoxia.".
+
+Every turn rule:
 	if metal panel is on the oxygenation tank:
 		if duct tape is on the wall:
 			end the story saying "Despite your lack of knowledge about the space station, you were able to save everyone onboard from dying of suffocation. Good Job!".
