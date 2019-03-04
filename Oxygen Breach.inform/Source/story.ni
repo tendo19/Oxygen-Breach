@@ -16,36 +16,18 @@ The description of Utility Room is "This is where all the tools are kept. The ma
 
 West Wing is a room.
 It is west of the Main Room.
-The description of West Wing is "There is nothing much here ... except the commander's locker. The main room is to the east."
+The description of West Wing is "There is nothing much here ... except the commander's locker. Perhaps you should take a closer look at it. The main room is to the east."
 
 East Wing is a room.
 It is east of the Main Room.
-The description of East Wing is "..."
+The description of East Wing is "There is a crack on the wall and the oxygenation tank has malfunctioned. There's a metal panel on the floor that should be on the tank. The oxygen level is critical. Repair the damage immediately!"
 
 Commander is a man in the control center.
 The description of the commander is "This is the guy in charge. He probably knows a thing or two about this place."
 
 Aerospace Engineer is a man in the main room.
 Understand "engineer" as the aerospace engineer.
-The description of the aerospace engineer is "He specializes in engineering and knowing about spaceships. "
-
-
-
-[I don't know how to make them talk. :( ]
-
-[Instead of talking to the aerospace engineer: 
-	say "'I know the tools you need to fix it. You need to be quick though,' he says."
-
-Talking to is an action applying to one visible thing.
-Understand "talk to aerospace engineer" or "converse with aerospace engineer" as talking to.
-
-Check talking to: say "The aerospace engineer doesn't reply."
-
-Instead of talking to aerospace engineer: say "'Do you know how to fix the leak in the east wing?' you ask, 'I know the tools you need to fix it. You need to be quick though,' he replies, you comment, 'What do I need to fix the leak?' 'You need a wrench, screws and bolts, and a hammer.'"]
-
-
-
-
+The description of the aerospace engineer is "He knows a thing or two about about this space station."
 
 
 The warning sign is a thing in the main room.
@@ -53,6 +35,7 @@ The warning sign is not portable.
 The description of the sign is "DO NOT ENTER EAST WING WITHOUT PROPER GEAR. NO OXYGEN!!"
 
 The toolbox is a closed openable container in the utility room.
+It is not portable.
 The description of the toolbox is "A heavy container full of useful tools."
 
 Screws is an object in the toolbox.
@@ -65,6 +48,7 @@ The description of bolts is "You'll need this to fix the leak."
 Duct tape is an object.
 It is in the locker.
 The description of duct tape is "You'll need this to fix the leak."
+Understand "tape" as duct tape.
 
 Astronaut suit is an object.
 It is in the locker.
@@ -78,6 +62,7 @@ The description of the picture frame is "You see a photo of the ISS and a captio
 
 The metal panel is a thing in the east wing.
 The description of the metal panel is "This needs to go back onto the oxygenation tank for it to function properly."
+Understand "panel" as metal panel.
 
 The Locker is in the west wing.
 It is a closed openable container. 
@@ -86,7 +71,7 @@ The locker is not portable.
 
 The control panel is a thing in the control center.
 The control panel is not portable.
-The description is "It's covered with knobs, buttons, screens, and a bunch of flickering lights. You aren't sure what anything does."
+The description is "You see knobs, buttons, screens, and a bunch of flickering lights. You aren't sure what anything does."
 
 The description of the locker is "This is the commander's locker. Enter the six-digit pin code to unlock it."
 	After examining the locker:
@@ -120,45 +105,29 @@ After reading a command when the command prompt is "Would you like to try again?
 		say run paragraph on;
 		reject the player's command.
 
-Instead of going east:
+After going east from Main Room:
 	if the player is wearing astronaut suit:
 		say "The oxygen level is critical. Repair the damage immediately!";
 	otherwise:
 		end the story finally saying "You gasp for air. The door behind you closes. You die from hypoxia."
-		
-
-
-
-
-[Instead of going to east wing:
-	Ask "Are you sure you want to enter? (Yes or No) >";	
-		If the player's command matches "yes" or the player's command matches "y":
-			If the player is wearing astronaut suit: 
-				say "The oxygen level is critical. Repair the damage immediately!";
-			Otherwise:
-				say "You gasp for air. The door behind you closes. You die from hypoxia."
-		If the player's command matches "no" or the player's command matches "n":
-				say "After using good judgement, you determine that it's not safe to enter a room with no oxygen."]
-				
-
-[If the player enters east wing:
-	If the player is wearing the astronaut suit: say "The oxygen level is critical. Repair the damage immediately!"  
-	otherwise: say "You gasp for air. The door behind you closes. You die from hypoxia."]
-
-
-[Instead of taping duct tape to wall:
-	say "You cover the tiny crack with a bunch of duct tape. Now the wall is sealed.";
-	remove duct tape from play.]
-
-
 	
-[Instead of inserting the duct tape into the wall:
-	if the player is holding the duct tape:
-		say "You cover the tiny crack with a bunch of duct tape. Now the wall is sealed.";
-		remove duct tape from play.]
 
+
+
+
+Instead of going to east wing:
+	Say "Are you sure you want to enter?";
+	If player consents:
+		If the player is wearing astronaut suit: 
+			say "You open the door to the east wing. A sudden burst of cold air rushes through your body.";
+			move player to east wing;
+		Otherwise:
+			end the story finally saying "You gasp for air. The door behind you closes. You die from hypoxia.";
+	Otherwise:
+		say "After using good judgement, you determine that it's not safe to enter a room with no oxygen."
 
 Button is a thing.
+The description of button is "You aren't sure what it does."
 The button is part of the control panel.
 The button is not portable.
 Instead of pushing button: 
@@ -173,6 +142,21 @@ Instead of going to West Wing when the button is not handled:
 	
 Instead of going to Utility Room when the button is not handled:
 	say "You have to open the door from the control center.".
+
+
+Knobs is a thing.
+The knobs is part of the control panel.
+The description of the knobs is "You aren't sure what it does ... better if you leave it alone."
+Understand "knob" as knobs.
+
+Screen is a thing.
+The screen is part of the control panel.
+The description of the screen is "You stare at it, but everything you see makes no sense to you."
+
+Lights is a thing.
+The lights is part of the control panel.
+The description of lights is "You are mesmerized by the colorful lights but have no clue what they mean."
+Understand "flickering lights" as lights.
 
 
 
@@ -192,7 +176,7 @@ Instead of talking to commander: say "'Hey, how are you?' you say.[paragraph bre
 
 
 Instead of talking to someone:
-	say "They don't answer you."
+	say "Who are you talking to?"
 
 
 
@@ -204,38 +188,54 @@ Instead of talking to someone:
 The wall is a thing in the east wing.
 The wall is a supporter.
 The wall is not portable.
-The description of the wall is "[If duct tape is not on wall] There is a huge crack that must be covered.[end if] There has to be some way to repair this ... or we will all die."
+The description of the wall is "[If duct tape is not on wall] There is a huge crack that must be covered.[end if] There has to be some way to patch this up ... or we will all die."
+Understand "crack" as wall.
 
 
 
-The oxygenation tank is a thing in the east wing. 
+The oxygenation tank is a thing in the east wing.
 The oxygenation tank is a supporter.
 The oxygenation tank is not portable.
-The description of the oxygenation tank is "The impact of the meteorite must have caused it to malfunction. [if metal panel is not on oxygenation tank] There are some loose components ... they must be put back together.[end if]"
-
-
+The description of the oxygenation tank is "[if metal panel is not on oxygenation tank] There are some loose components ... they must be put back together.[end if] The impact of the meteorite must have caused it to malfunction."
+Understand "tank" and "oxygen tank" as oxygenation tank.
 
 
 
 [Use the After command here, so this triggers after the duct tape is on the wall.]
 After putting duct tape on wall:
-	say "You put the duct tape over the crack on the wall. Luckily you had just enough to cover the crack.".
+	say "You put the duct tape over the crack on the wall. Luckily you had just enough to cover the crack."
 
 [This code prevents the player from taking the duct tape off of the wall.]
 Instead of taking duct tape when duct tape is on wall:
 	say "Why would you want to do that? The duct tape is covering the crack quite nicely and you have other things to do, so get on with it, already!"
 
+After putting screws on oxygenation tank:
+	say "You carefully place all the screws in the right place."
+
+After putting bolts on oxygenation tank:
+	say "The bolts are now secured on the tank."
+
+After putting metal panel on oxygenation tank:
+	say "You set the panel on the tank, and it fits perfectly. You hear the oxygenation tank running. You fixed the oxygentation tank."
+
+Instead of putting screws on wall:
+	say "How will putting screws on the wall cover the crack?!"
+
+Instead of putting bolts on wall:
+	say "You will accomplish nothing from doing that!"
+
+Instead of putting duct tape on oxygenation tank:
+	say "Duct tape doesn't fix everything!!"
 
 
-
-[An every turn rule:
-If metal panel is on the oxygenation tank:
-		End story finally saying "Despite your lack of knowledge about the space station, you were able to save everyone onboard from facing a catastrophic fate. Good Job!"]
-
+[Instead of putting metal panel on oxygentation tank: 
+	if the screws and bolts are not on oxygentation tank:
+		say "It won't fit unless you put something else in first.".]
 
 An every turn rule:
 	if metal panel is on the oxygenation tank:
 		if duct tape is on the wall:
-			end the story saying "Despite your lack of knowledge about the space station, you were able to save everyone onboard from facing a catastrophic fate. Good Job!".
+			end the story saying "Despite your lack of knowledge about the space station, you were able to save everyone onboard from dying of suffocation. Good Job!".
 
 
+The description of player is "You are a random person who got chosen to take a tour on the ISS. This is a once in a lifetime oppurtunity so you gladly accept the offer."
